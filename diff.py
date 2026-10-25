@@ -1,14 +1,14 @@
 import re
 
 def simp(funct,power):
-    return (str(power)+ "*" + "(" + str(funct) + ")" + "^" + str(power-1))
+    return (str(power)+ "*" + "(" + str(funct) + ")" + "**" + str(power-1))
 
 def exp(funct,power):
     if re.search(r'^[0-9]',power):
         z=""
         for sep in range(9):
             z=z+str(sep)
-        return simp(power,"1") + "*" + "e" + "^" + power
+        return simp(power,"1") + "*" + "e" + "**" + power
     else:
         return (funct + "^" + power)
 
